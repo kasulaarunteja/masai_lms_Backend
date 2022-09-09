@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.post('/assignment', async (req, res) => {
   try {
-    res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
+    // res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
     const assignment = await Assignment.create(req.body)
     res.send(assignment)
   } catch (err) {
