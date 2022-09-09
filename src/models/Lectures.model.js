@@ -16,7 +16,7 @@ const LecturesSchema = new mongoose.Schema(
       required: true,
     },
     Scheduled: { type: Date, default: Date.now() },
-    optional :{type:String,},
+    optional: { type: String },
   },
   {
     versionkey: false,
@@ -24,5 +24,4 @@ const LecturesSchema = new mongoose.Schema(
   },
 )
 
-
-module.exports = mongoose.model('lectures',  LecturesSchema)
+module.exports = mongoose.model('lectures', LecturesSchema)
