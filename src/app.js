@@ -9,7 +9,11 @@ const { Lectures, router } = require('./controllers/Lectures.controller')
 const Assignment = require('./controllers/Assignments.controller')
 const { register, login } = require('./controllers/auth.controller')
 
-app.use(cors())
+app.use(cors({
+  origin: "*",
+  credentials: true,
+  methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
+}))
 app.use(express.json())
 require('dotenv').config()
 app.post('/register', register)
