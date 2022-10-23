@@ -15,6 +15,7 @@ const AssignmentSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    
     Scheduled: { type: Date, default: Date.now() },
     optional: { type: String },
   },
