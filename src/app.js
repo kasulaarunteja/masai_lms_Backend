@@ -2,12 +2,14 @@ const express = require('express')
 const connect = require('./config/db')
 
 const app = express()
+
 // const router = express.Router();
 const cors = require('cors')
 require('dotenv').config()
 const { Lectures, router } = require('./controllers/Lectures.controller')
 const Assignment = require('./controllers/Assignments.controller')
 const { register, login } = require('./controllers/auth.controller')
+
 
 app.use(
   cors({

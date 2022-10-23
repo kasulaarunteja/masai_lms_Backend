@@ -14,6 +14,7 @@ router.post('/lectures', async (req, res) => {
   }
 })
 
+
 router.get('/lectures', async (req, res) => {
   try {
     const lectures = await Lectures.find().lean().exec()

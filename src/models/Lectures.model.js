@@ -18,7 +18,6 @@ const LecturesSchema = new mongoose.Schema(
     Scheduled: { type: Date, default: Date.now() },
     optional: { type: String },
   },
-  
   {
     versionkey: false,
     timestamps: true,
